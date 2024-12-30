@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/profile.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/icon/title-logo.svg">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a class="logo" href="home.html">
+            <img src="../Assets/icon/arté.png" alt="">
+        </a>
+        <div class="menu-container">
+            <div class="menu-inside">
+                <div class="profile">
+                    <a href="dashboard.html">
+                        <img src="../Assets/image/artist-1.jpeg" alt="Profile Icon">
+                    </a>
+                </div>
+                <div class="open-menu">
+                    <button onclick="openNav()">
+                        <img src="../Assets/icon/icon-menu.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SIDENAV -->
+    <div id="overlay" class="overlay"></div>
+    <div id="mySidenav" class="sidenav">
+        <button class="closebtn" onclick="closeNav()">&times;</button>
+        <div class="menu-overlay">
+            <div class="artType">
+                <ul>
+                    <h6>Category</h6>
+                    <li><a href="artwork.html">Abstract</a></li>
+                    <li><a href="artwork.html">Animal</a></li>
+                    <li><a href="artwork.html">Botanical</a></li>
+                    <li><a href="artwork.html">Drawings</a></li>
+                    <li><a href="artwork.html">Illustration</a></li>
+                    <li><a href="artwork.html">Figurative</a></li>
+                    <li><a href="artwork.html">Landscape</a></li>
+                    <li><a href="artwork.html">Mythology</a></li>
+                    <li><a href="artwork.html">Religion</a></li>
+                    <li><a href="artwork.html">Still Life</a></li>
+                </ul>
+            </div>
+            <div class="nav-overlay">
+                <ul>
+                    <h6>Menu</h6>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="./artists.html">Artists</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="info">
+            <div class="text">Get in touch</div>
+            <button>info@DevArt.com</button>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="profile-container">
+        <div class="profile-photo">
+            <img src="../Assets/image/kazuhiro.jpg" alt="">
+        </div>
+        <div class="artist-name">
+            Kazuhiro
+        </div>
+        <div class="intro">
+            Japanese Artists/Photographer
+        </div>
+        <div class="stats">
+            <div class="Follower">1,988 <span>Followers</span></div>
+            <div class="Following">1,988 <span>Following</span></div>
+            <div class="Artwork">67 <span>Artwork</span></div>
+        </div>
+        <div class="cta-btn">
+            <button class="followBtn">Follow</button>
+            <button class="contactBtn">Get in touch</button>
+        </div>
+    </div>
+
+    <div class="tab">
+        <div class="button-group">
+            <button class="tablinks active" onclick="openTab(event, 'Work')">Work</button>
+            <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+        </div>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Work" class="tabcontent default">
+        <div class="art-wrap">
+            <div class="box">
+                <a href="openArt.html">
+                    <img src="../Assets/image/figurative.jpg" alt="">
+                    <div class="text">
+                        <div class="text-inner">See Artwork</div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="openArt.html">
+                    <img src="../Assets/image/article2.jpg" alt="">
+                    <div class="text">
+                        <div class="text-inner">See Artwork</div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="openArt.html">
+                    <img src="../Assets/image/botanical.jpg" alt="">
+                    <div class="text">
+                        <div class="text-inner">See Artwork</div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="openArt.html">
+                    <img src="../Assets/image/article4.jpg" alt="">
+                    <div class="text">
+                        <div class="text-inner">See Artwork</div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="openArt.html">
+                    <img src="../Assets/image/stillLife.jpg" alt="">
+                    <div class="text">
+                        <div class="text-inner">See Artwork</div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="openArt.html">
+                    <img src="../Assets/image/left hand.png" alt="">
+                    <div class="text">
+                        <div class="text-inner">See Artwork</div>
+                    </div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <img src="../Assets/image/mythology.jpg" alt="">
+                    <div class="text">
+                        <div class="text-inner">See Artwork</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <div class="about-inner">
+            <div class="left">
+                <div class="biography">
+                    <div class="title">Biography</div>
+                    <p>is a Japanese artist/photographer. He brings together a number of different practices into his
+                        colorful and dynamic artworks, including painting, collage, printmaking, and photography, and is
+                        constantly experimenting with new ways of expressing his creativity.</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="title">Social</div>
+                <div class="social-buttons">
+                    <button class="social-btn">
+                        <a href="">
+                            <img src="../Assets/icon/facebook-logo.png" alt="">
+                        </a>
+                    </button>
+                    <button class="social-btn">
+                        <a href="">
+                            <img src="../Assets/icon/linkedin.png" alt="">
+                        </a>
+                    </button>
+                    <button class="social-btn">
+                        <a href="">
+                            <img src="../Assets/icon/instagram.png" alt="">
+                        </a>
+                    </button>
+                    <button class="social-btn">
+                        <a href="">
+                            <img src="../Assets/icon/twitter.png" alt="">
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER SECTION -->
+    <section class="footer">
+        <div class="footer-container">
+            <div class="menu-row">
+                <a href="">Artists</a>
+                <a href="">News & Insights</a>
+                <a href="">About</a>
+                <a href="">Terms</a>
+            </div>
+            <div class="contact">
+                <a href="">Get in touch</a>
+            </div>
+            <div class="social">
+                <a href="">Dribbble</a>
+                <a href="">Artsy</a>
+                <a href="">Awwards</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="watermark">
+        <div class="watermark-container">
+            <div>
+                <div class="line2"></div>
+            </div>
+            <div class="males">
+                <p>Created by informatics students as a final project</p>
+                <p>Specially created by the DevArt team (IP TEAM)</p>
+                <p>© 2024 Arte Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "50%";
+            document.getElementById("overlay").style.display = "block"; // tampilkan overlay
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("overlay").style.display = "none"; // sembunyikan overlay
+        }
+
+        function openTab(evt, tabName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            // Remove any previous tab-specific classes from body
+            document.body.classList.remove("Work", "About");
+
+            // Add tab-specific class to body
+            document.body.classList.add(tabName.replace(/\s+/g, '-').toLowerCase());
+
+            // Initialize chart if Activity tab is opened
+            if (tabName === 'Activity') {
+                initChart();
+            }
+        }
+
+
+        // Inisialisasi tab default saat halaman pertama kali dimuat
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".tablinks.active").click();
+        });
+    </script>
+</body>
+
+</html>

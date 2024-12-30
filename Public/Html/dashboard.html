@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/dashboard.css">
+    <link rel="icon" type="image/x-icon" href="../Assets/icon/title-logo.svg">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a class="logo" href="home.html">
+            <img src="../Assets/icon/arté.png" alt="">
+        </a>
+        <div class="menu-container">
+            <div class="menu-inside">
+                <div class="profile">
+                    <a href="dashboard.html">
+                        <img src="../Assets/image/artist-1.jpeg" alt="Profile Icon">
+                    </a>
+                </div>
+                <div class="open-menu">
+                    <button onclick="openNav()">
+                        <img src="../Assets/icon/icon-menu.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SIDENAV -->
+    <div id="overlay" class="overlay"></div>
+    <div id="mySidenav" class="sidenav">
+        <button class="closebtn" onclick="closeNav()">&times;</button>
+        <div class="menu-overlay">
+            <div class="artType">
+                <ul>
+                    <h6>Category</h6>
+                    <li><a href="artwork.html">Abstract</a></li>
+                    <li><a href="artwork.html">Animal</a></li>
+                    <li><a href="artwork.html">Botanical</a></li>
+                    <li><a href="artwork.html">Drawings</a></li>
+                    <li><a href="artwork.html">Illustration</a></li>
+                    <li><a href="artwork.html">Figurative</a></li>
+                    <li><a href="artwork.html">Landscape</a></li>
+                    <li><a href="artwork.html">Mythology</a></li>
+                    <li><a href="artwork.html">Religion</a></li>
+                    <li><a href="artwork.html">Still Life</a></li>
+                </ul>
+            </div>
+            <div class="nav-overlay">
+                <ul>
+                    <h6>Menu</h6>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="./artists.html">Artists</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="info">
+            <div class="text">Get in touch</div>
+            <button>info@DevArt.com</button>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="tab">
+        <div class="title-page">
+            Profile & Directory
+        </div>
+        <div class="button-group">
+            <button class="tablinks active" onclick="openTab(event, 'Public Profile')">Public Profile</button>
+            <button class="tablinks" onclick="openTab(event, 'Personal Info')">Personal Info</button>
+            <button class="tablinks" onclick="openTab(event, 'Submit Art')">Submit Art</button>
+            <button class="tablinks" onclick="openTab(event, 'Activity')">Activity</button>
+        </div>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Public Profile" class="tabcontent default">
+        <form action="">
+            <div class="header">
+                <div class="title-tab">Your profile</div>
+                <div class="sub-title">Add more information about you here.</div>
+            </div>
+            <label for="">DISPLAY NAME</label>
+            <input type="text" placeholder="Full name">
+            <label for="">ABOUT YOU</label>
+            <textarea name="" id="" cols="20" rows="10"></textarea>
+            <label for="">YOUR BIOGRAPHY</label>
+            <textarea name="" id="" cols="20" rows="30"></textarea>
+            <label for="" class="file-container">
+                <span>PROFILE PHOTO</span>
+                <div>
+                    <input type="file" id="images" accept="image/*" required>
+                </div>
+            </label>
+            <div class="header2">
+                <div class="title-tab">Social Media Links</div>
+                <div class="sub-title">Improve visibility and help people contact you by adding your social media links
+                    here.</div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <label for="">LINKEDIN</label>
+                    <input type="url" placeholder="Paste url here">
+                </div>
+                <div class="item">
+                    <label for="">INSTAGRAM</label>
+                    <input type="url" placeholder="Paste url here">
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <label for="">X</label>
+                    <input type="url" placeholder="Paste url here">
+                </div>
+                <div class="item">
+                    <label for="">YOUTUBE</label>
+                    <input type="url" placeholder="Paste url here">
+                </div>
+            </div>
+            <input type="submit" value="Save Changes">
+        </form>
+
+    </div>
+
+    <div id="Personal Info" class="tabcontent">
+        <form action="">
+            <div class="header">
+                <div class="title-tab">Change Password</div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <label for="">NEW PASSWORD</label>
+                    <input type="password" placeholder="New password">
+                </div>
+                <div class="item">
+                    <label for="">CONFIRM PASSWORD</label>
+                    <input type="password" name="" id="" placeholder="Confirm new password">
+                </div>
+                <div class="item">
+                    <input type="submit" value="Update Password" class="">
+                </div>
+            </div>
+        </form>
+        <div class="line"></div>
+        <form action="">
+            <div class="header">
+                <div class="title-tab">Change Email</div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <label for="">NEW EMAIL</label>
+                    <input type="email" placeholder="New email">
+                </div>
+                <div class="item">
+                    <label for="">CONFIRM EMAIL</label>
+                    <input type="email" name="" id="" placeholder="Confirm new email">
+                </div>
+                <div class="item">
+                    <input type="submit" value="Update Email" class="">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="Submit Art" class="tabcontent">
+        <form action="">
+            <div class="header">
+                <div class="title-tab">Submit Artwork</div>
+                <div class="sub-title">Submit your artwork here.</div>
+            </div>
+            <form action="">
+                <label for="">TITLE OF ART</label>
+                <input type="text" name="" id="" placeholder="Title of artwork">
+                <label for="">TYPE OF ART</label>
+                <select id="" >
+                    <option value="" disabled selected class="selected">Select</option>
+                    <option value="">Abstract</option>
+                    <option value="">Animal</option>
+                    <option value="">Botanical</option>
+                    <option value="">Drawings</option>
+                    <option value="">Illustration</option>
+                    <option value="">Figurative</option>
+                    <option value="">Landscape</option>
+                    <option value="">Mythology</option>
+                    <option value="">Religion</option>
+                    <option value="">Still Life</option>
+                </select>
+                <label for="">DESCRIPTION</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <label for="" class="file-container">
+                    <span>ARTWORK IMAGE</span>
+                    <div>
+                        <input type="file" id="images" accept="image/*" required>
+                    </div>
+                </label>
+                <input type="submit" value="Submit Artwork">
+            </form>
+        </form>
+    </div>
+
+    <div id="Activity" class="tabcontent">
+        <form action="">
+            <div class="header">
+                <div class="title-tab">Recent Activity</div>
+            </div>
+            <canvas id="activityChart" width="400" height="200"></canvas>
+            <!-- Content for Recent Activity -->
+        </form>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <section class="footer">
+        <div class="footer-container">
+            <div class="menu-row">
+                <a href="">Artists</a>
+                <a href="">News & Insights</a>
+                <a href="">About</a>
+                <a href="">Terms</a>
+            </div>
+            <div class="contact">
+                <a href="">Get in touch</a>
+            </div>
+            <div class="social">
+                <a href="">Dribbble</a>
+                <a href="">Artsy</a>
+                <a href="">Awwards</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="watermark">
+        <div class="watermark-container">
+            <div>
+                <div class="line2"></div>
+            </div>
+            <div class="males">
+                <p>Created by informatics students as a final project</p>
+                <p>Specially created by the DevArt team (IP TEAM)</p>
+                <p>© 2024 Arte Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "50%";
+            document.getElementById("overlay").style.display = "block"; // tampilkan overlay
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("overlay").style.display = "none"; // sembunyikan overlay
+        }
+
+        function openTab(evt, tabName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            // Remove any previous tab-specific classes from body
+            document.body.classList.remove("public-profile", "personal-info", "submit-art", "activity");
+
+            // Add tab-specific class to body
+            document.body.classList.add(tabName.replace(/\s+/g, '-').toLowerCase());
+
+            // Initialize chart if Activity tab is opened
+            if (tabName === 'Activity') {
+                initChart();
+            }
+        }
+
+        function initChart() {
+            // Chart.js script
+            const ctx = document.getElementById('activityChart').getContext('2d');
+            const activityChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                    datasets: [
+                        {
+                            label: 'Followers',
+                            data: [120, 190, 300, 500, 200, 300],
+                            backgroundColor: 'rgba(255, 2555, 255, 0.3)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Likes',
+                            data: [150, 230, 200, 300, 250, 400],
+                            backgroundColor: 'rgba(255, 32, 78, 0.3)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Inisialisasi tab default saat halaman pertama kali dimuat
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".tablinks.active").click();
+        });
+    </script>
+</body>
+
+</html>

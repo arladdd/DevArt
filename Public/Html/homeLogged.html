@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte | Virtual Art Gallery</title>
+    <link rel="icon" type="image/x-icon" href="../Assets/icon/title-logo.svg">
+    <link rel="stylesheet" href="../Style/homeLogged.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <a class="logo" href="home.html">
+            <img src="../Assets/icon/web-logo.svg" alt="">
+        </a>
+        <div class="menu-container">
+            <div class="menu-inside">
+                <div class="profile">
+                    <a href="dashboard.html">
+                        <img src="../Assets/image/artist-3.jpeg" alt="Profile Icon">
+                    </a>
+                </div>
+                <div class="open-menu">
+                    <button onclick="openNav()">Menu</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SIDENAV -->
+    <div id="overlay" class="overlay"></div>
+    <div id="mySidenav" class="sidenav">
+        <button class="closebtn" onclick="closeNav()">&times;</button>
+        <div class="menu-overlay">
+            <div class="artType">
+                <ul>
+                    <h6>Category</h6>
+                    <li><a href="artwork.html">Abstract</a></li>
+                    <li><a href="artwork.html">Animal</a></li>
+                    <li><a href="artwork.html">Botanical</a></li>
+                    <li><a href="artwork.html">Drawings</a></li>
+                    <li><a href="artwork.html">Illustration</a></li>
+                    <li><a href="artwork.html">Figurative</a></li>
+                    <li><a href="artwork.html">Landscape</a></li>
+                    <li><a href="artwork.html">Mythology</a></li>
+                    <li><a href="artwork.html">Religion</a></li>
+                    <li><a href="artwork.html">Still Life</a></li>
+                </ul>
+            </div>
+            <div class="nav-overlay">
+                <ul>
+                    <h6>Menu</h6>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="./artists.html">Artists</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="info">
+            <div class="text">Get in touch</div>
+            <button>info@DevArt.com</button>
+        </div>
+    </div>
+    <!--  -->
+
+    <!-- HERO SECTION -->
+    <div id="main">
+        <main class="parent">
+            <span class="title-hero" data-scroll>
+                <h1>One Stop Edu-Art Platform</h1>
+            </span>
+            <div class="image-wrap">
+                <span class="left-hand" data-scroll-direction="horizontal"></span>
+                <span class="right-hand"></span>
+            </div>
+        </main>
+
+        <section class="word-container" data-scroll>
+            <div class="word">
+                <p>Each artwork is a unique story inviting you to <span class="coloring">see the world from a new
+                        perspective</span></p>
+            </div>
+        </section>
+
+        <!-- DISCOVER ART SECTION -->
+        <section class="most-art" data-scroll>
+            <div class="title-section">
+                <h2>DISCOVER ART</h2>
+            </div>
+            <div>
+                <div class="line"></div>
+            </div>
+            <div class="artwork-container">
+                <div class="art-row">
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/abstract.jpg" alt="">
+                        </div>
+                        <p class="caption">Abstract</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/animal.jpg" alt="">
+                        </div>
+                        <p class="caption">Animal</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/botanical.jpg" alt="">
+                        </div>
+                        <p class="caption">Botanical</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/drawing.jpg" alt="">
+                        </div>
+                        <p class="caption">Drawings</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/illustration.jpg" alt="">
+                        </div>
+                        <p class="caption">Illustration</p>
+                    </div>
+                </div>
+                <div class="art-row">
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/figurative.jpg" alt="">
+                        </div>
+                        <p class="caption">Figurative</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/landscape.jpg" alt="">
+                        </div>
+                        <p class="caption">Landscape</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/mythology.jpg" alt="">
+                        </div>
+                        <p class="caption">Mythology</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/religion.jpg" alt="">
+                        </div>
+                        <p class="caption">Religion</p>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="../Assets/image/stillLife.jpg" alt="">
+                        </div>
+                        <p class="caption">Still Life</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POPULAR ARTIST SECTION -->
+        <section class="popular" data-scroll>
+            <div class="title-section">
+                <h2>POPULAR ARTISTS</h2>
+            </div>
+            <div class="content-divide">
+                <div id="default-image" style="background-image: url('default.jpg')"></div>
+                <div class="list">
+                    <!-- scrolling -->
+                    <div class="scrolling-text-container">
+                        <div class="scrolling-text-inner" style="--marquee-speed: 20s; --direction:scroll-left"
+                            role="marquee">
+                            <div class="scrolling-text">
+                                <div class="scrolling-text-item">Most Celebrate Artists</div>
+                                <div class="scrolling-text-item">➛</div>
+                                <div class="scrolling-text-item">Most Popular Artwork</div>
+                                <div class="scrolling-text-item">➛</div>
+                                <div class="scrolling-text-item">Most Celebrate Artists</div>
+                                <div class="scrolling-text-item">➛</div>
+                                <div class="scrolling-text-item">Most Popular Artwork</div>
+                                <div class="scrolling-text-item">➛</div>
+                            </div>
+                            <div class="scrolling-text">
+                                <div class="scrolling-text-item">Most Celebrate Artists</div>
+                                <div class="scrolling-text-item">➛</div>
+                                <div class="scrolling-text-item">Most Popular Artwork</div>
+                                <div class="scrolling-text-item">➛</div>
+                                <div class="scrolling-text-item">Most Celebrate Artists</div>
+                                <div class="scrolling-text-item">➛</div>
+                                <div class="scrolling-text-item">Most Popular Artwork</div>
+                                <div class="scrolling-text-item">➛</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End scroll -->
+                    <div class="row">
+                        <a href="" class="art-show" data-image="../Assets/image/animal.jpg">
+                            <span class="name">Dirga ganteng</span>
+                            <span class="artName">Dream of you</span>
+                            <span class="year">2024</span>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="" class="art-show" data-image="../Assets/image/illustration.jpg">
+                            <span class="name">Alexandro Pizzaro</span>
+                            <span class="artName">Dream of you</span>
+                            <span class="year">2024</span>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="" class="art-show" data-image="../Assets/image/drawing.jpg">
+                            <span class="name">Polnareff</span>
+                            <span class="artName">Dream of you</span>
+                            <span class="year">2024</span>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="" class="art-show" data-image="../Assets/image/botanical.jpg">
+                            <span class="name">Udin Ujang</span>
+                            <span class="artName">Dream of you</span>
+                            <span class="year">2024</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- EXHIBITION INFO -->
+         <section class="exhibition">
+            <div class="exhibition-container">
+                <div class="exhibition-image">
+                    <img src="../Assets/image/exhibition.jpg" alt="">
+                </div>
+                <div class="explainer-contain">
+                    <div class="title-exhibition">Art Jakarta</div>
+                    <p>Art Jakarta holds on to its main vision to be the Southeast Asian-focused art fair in Asia, and
+                        one of the most exciting art fairs in the region.</p>
+                    <button onclick="openInfoModal()">MORE INFO</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWS SECTION -->
+        <section data-scroll class="news">
+            <div class="title-section">
+                <h2>NEWS & INSGIHTS</h2>
+            </div>
+            <div class="article-container">
+                <a class="article" href="">
+                    <div class="articleImage">
+                        <img src="../Assets/image/article1.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <p>The Most Famous Van Gogh Paintings Everyone Should Know</p>
+                    </div>
+                    <div class="tag">
+                        <p>Company Announcement</p>
+                    </div>
+                    <div class="line2"></div>
+                </a>
+                <a class="article" href="">
+                    <div class="articleImage">
+                        <img src="../Assets/image/article2.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <p>Banksy Street Art Tour: The Best Graffiti by the Most Secretive of Artists</p>
+                    </div>
+                    <div class="tag">
+                        <p>Best Practice</p>
+                    </div>
+                    <div class="line2"></div>
+                </a>
+                <a class="article" href="">
+                    <div class="articleImage">
+                        <img src="../Assets/image/article3.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <p>10 Controversial Artworks That Changed Art History</p>
+                    </div>
+                    <div class="tag">
+                        <p>Best Practice</p>
+                    </div>
+                    <div class="line2"></div>
+                </a>
+                <a class="article" href="">
+                    <div class="articleImage">
+                        <img src="../Assets/image/article4.jpg" alt="">
+                    </div>
+                    <div class="title">
+                        <p>The 30 Most Popular Modern & Contemporary Artists</p>
+                    </div>
+                    <div class="tag">
+                        <p>Product News</p>
+                    </div>
+                    <div class="line2"></div>
+                </a>
+            </div>
+        </section>
+
+        <section data-scroll>
+            <div class="text-long">
+                <p>Each artwork is a unique journey, where beauty and value can ebb and flow. Cherish the experience,
+                    but be mindful of the risks.</p>
+            </div>
+        </section>
+
+
+        <!-- FOOTER SECTION -->
+        <section class="footer">
+            <div class="footer-container">
+                <div class="menu-row">
+                    <a href="">Artists</a>
+                    <a href="">News & Insights</a>
+                    <a href="">About</a>
+                    <a href="">Terms</a>
+                </div>
+                <div class="contact">
+                    <a href="">Get in touch</a>
+                </div>
+                <div class="social">
+                    <a href="">Dribbble</a>
+                    <a href="">Artsy</a>
+                    <a href="">Awwards</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="watermark">
+            <div class="watermark-container">
+                <div>
+                    <div class="line2"></div>
+                </div>
+                <div class="males">
+                    <p>Created by informatics students as a final project</p>
+                    <p>Specially created by the DevArt team (IP TEAM)</p>
+                    <p>© 2024 Arte Limited. All rights reserved.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="../Javascript/locomotive-scroll.min.js"></script>
+    <script>
+        // Locomotive Scroll initialization (as per your existing setup)
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('#main'),
+            smooth: true,
+        });
+        const leftHand = document.querySelector('.left-hand');
+        const rightHand = document.querySelector('.right-hand');
+
+        scroll.on('scroll', (obj) => {
+            const scrollY = obj.scroll.y;
+            leftHand.style.transform = `translateX(-${scrollY}px)`;
+            rightHand.style.transform = `translateX(${scrollY}px)`;
+        });
+
+        // Function to handle opening and closing of sign-in modal
+        const openSign = () => {
+            openModal('signinModal');
+        };
+
+        const collapseSign = () => {
+            closeModal('signinModal');
+        };
+
+        // Function to handle overlay navigation
+        const openNav = () => {
+            document.getElementById("mySidenav").style.width = "50%";
+            document.getElementById("overlay").style.display = "block";
+        };
+
+        const closeNav = () => {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("overlay").style.display = "none";
+        };
+
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'flex';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+      
+        // Hover effect for default image (as per your existing setup)
+        document.addEventListener("DOMContentLoaded", function () {
+            const artistLinks = document.querySelectorAll(".art-show");
+            const defaultImage = document.getElementById("default-image");
+
+            function setDefaultImage() {
+                if (artistLinks.length > 0) {
+                    const defaultImageUrl = artistLinks[0].getAttribute("data-image");
+                    defaultImage.style.backgroundImage = `url('${defaultImageUrl}')`;
+                }
+            }
+
+            setDefaultImage();
+
+            artistLinks.forEach(function (link) {
+                link.addEventListener("mouseover", function () {
+                    const imageUrl = this.getAttribute("data-image");
+                    defaultImage.classList.add("fade-out");
+                    setTimeout(function () {
+                        defaultImage.style.backgroundImage = `url('${imageUrl}')`;
+                    }, 120);
+
+                    setTimeout(function () {
+                        defaultImage.classList.remove("fade-out");
+                    }, 120);
+                });
+            });
+        });
+
+        // Add 'filled' class for inputs with value
+        document.querySelectorAll('input, select').forEach(element => {
+            const updateFilledClass = () => {
+                if (element.value !== '') {
+                    element.classList.add('filled');
+                } else {
+                    element.classList.remove('filled');
+                }
+            };
+
+            element.addEventListener('input', updateFilledClass);
+            element.addEventListener('blur', updateFilledClass);
+
+            // Initialize the class on page load
+            updateFilledClass();
+        });
+    </script>
+</body>
+
+</html>
